@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Квадратное уравнение"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/x2_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="x + "
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/b"
+        app:layout_constraintEnd_toStartOf="@id/b"
+        app:layout_constraintTop_toTopOf="@id/b" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/x2_text"
+        app:layout_constraintBottom_toTopOf="@id/x2_text"
+        app:layout_constraintTop_toTopOf="@id/x2_text"/>
+
+    <EditText
+        android:id="@+id/a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="a"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:gravity="bottom"
+        app:layout_constraintEnd_toStartOf="@id/x2_text"
+        app:layout_constraintTop_toTopOf="@id/b"
+        app:layout_constraintBottom_toBottomOf="@id/b"/>
+
+    <TextView
+        android:id="@+id/x_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="x + "
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/b"
+        app:layout_constraintTop_toTopOf="@id/b"
+        app:layout_constraintBottom_toBottomOf="@id/b" />
+
+    <EditText
+        android:id="@+id/b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="b"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <EditText
+        android:id="@+id/c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="c"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/x_text"
+        app:layout_constraintTop_toTopOf="@id/b"
+        app:layout_constraintBottom_toBottomOf="@id/b"/>
+
+    <Button
+        android:id="@+id/execute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="РЕШИТЬ"
+        app:layout_constraintTop_toBottomOf="@id/b"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
